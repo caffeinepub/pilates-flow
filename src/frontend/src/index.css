@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm cream palette */
+    --background: 0.95 0.018 85;
+    --foreground: 0.15 0 0;
+    --card: 0.99 0.006 85;
+    --card-foreground: 0.15 0 0;
+    --popover: 0.99 0.006 85;
+    --popover-foreground: 0.15 0 0;
+
+    /* Sage green as primary */
+    --primary: 0.56 0.06 148;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.91 0.02 85;
+    --secondary-foreground: 0.3 0 0;
+
+    --muted: 0.9 0.018 85;
+    --muted-foreground: 0.45 0 0;
+
+    --accent: 0.9 0.025 148;
+    --accent-foreground: 0.35 0.06 148;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.87 0.016 80;
+    --input: 0.87 0.016 80;
+    --ring: 0.56 0.06 148;
+
+    /* Sage green custom */
+    --sage: 0.62 0.055 148;
+    --sage-dark: 0.52 0.06 148;
+    --cream: 0.95 0.018 85;
+    --cream-light: 0.98 0.01 85;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.98 0.008 85;
+    --sidebar-foreground: 0.15 0 0;
+    --sidebar-primary: 0.56 0.06 148;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.9 0.018 85;
+    --sidebar-accent-foreground: 0.15 0 0;
+    --sidebar-border: 0.88 0.018 80;
+    --sidebar-ring: 0.56 0.06 148;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  .text-sage {
+    color: oklch(var(--sage));
+  }
+  .bg-sage {
+    background-color: oklch(var(--sage));
+  }
+  .bg-sage-dark {
+    background-color: oklch(var(--sage-dark));
+  }
+  .border-sage {
+    border-color: oklch(var(--sage));
+  }
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+}
